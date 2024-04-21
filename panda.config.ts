@@ -1,26 +1,23 @@
-import { defineConfig } from "@pandacss/dev";
+import { defineConfig } from '@pandacss/dev'
+
+import { globalCss } from './src/styles/global'
+import { tokens } from './src/styles/tokens'
+
+const prod = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
-  // Whether to use css reset
   preflight: true,
-
-  // Where to look for your css declarations
-  include: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
-
-  // Files to exclude
+  include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
   exclude: [],
+  hash: prod,
 
-  // Useful for theme customization
   theme: {
     extend: {
-      tokens: {
-        fonts: {
-          body: { value: "Gowun Batang, serif" },
-        },
-      },
+      tokens,
     },
   },
 
-  // The output directory for your css system
-  outdir: "styled-system",
-});
+  globalCss,
+
+  outdir: 'styled-system',
+})
