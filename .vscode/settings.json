@@ -1,4 +1,18 @@
 {
-  "cSpell.words": ["Batang", "codegen", "gowun", "hgjs", "outdir", "pandacss"],
-  "cSpell.ignorePaths": ["**/node_modules/**", "**/dist/**", "**/build/**", "pnpm-lock.yaml"]
+  "cSpell.words": [
+    "Batang",
+    "codegen",
+    "gowun",
+    "hgjs",
+    "lucide",
+    "outdir",
+    "pandacss",
+    "weddinghgjs"
+  ],
+  "cSpell.ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "pnpm-lock.yaml"
+  ]
 }
