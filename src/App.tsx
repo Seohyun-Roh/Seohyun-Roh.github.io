@@ -3,6 +3,7 @@ import { center, flex } from '../styled-system/patterns'
 
 import Account from './components/Account'
 import AccountItem from './components/AccountItem'
+import Maps from './components/Maps'
 
 function App() {
   return (
@@ -137,6 +138,20 @@ function App() {
           <Account who="신랑">
             <AccountItem name="김현곤" account="하나은행 3169-10345-20407" />
           </Account>
+        </section>
+
+        <section className={css({ paddingY: '48px', backgroundColor: 'white' })}>
+          <h2
+            className={css({
+              marginY: '32px',
+              fontSize: '20px',
+              textAlign: 'center',
+            })}
+          >
+            오시는 길
+          </h2>
+
+          <Maps />
         </section>
       </article>
     </main>

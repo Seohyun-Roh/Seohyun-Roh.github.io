@@ -1,18 +1,15 @@
 {
   "cSpell.words": [
+    "appkey",
     "Batang",
     "codegen",
     "gowun",
     "hgjs",
+    "kakao",
     "lucide",
     "outdir",
     "pandacss",
     "weddinghgjs"
   ],
-  "cSpell.ignorePaths": [
-    "**/node_modules/**",
-    "**/dist/**",
-    "**/build/**",
-    "pnpm-lock.yaml"
-  ]
+  "cSpell.ignorePaths": ["**/node_modules/**", "**/dist/**", "**/build/**", "pnpm-lock.yaml"]
 }
