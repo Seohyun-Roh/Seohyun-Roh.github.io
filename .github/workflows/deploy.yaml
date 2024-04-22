@@ -35,6 +35,8 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm run build
+        env:
+          VITE_API_KAKAO_KEY: ${{ secrets.VITE_API_KAKAO_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
