@@ -9,6 +9,9 @@ export default defineConfig({
   exclude: [],
 
   theme: {
+    breakpoints: {
+      sm: '500px',
+    },
     extend: {
       tokens,
     },
