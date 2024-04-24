@@ -37,6 +37,7 @@ jobs:
         run: pnpm run build
         env:
           VITE_API_KAKAO_KEY: ${{ secrets.VITE_API_KAKAO_KEY }}
+          VITE_IMAGE_PREFIX: ${{ secrets.VITE_IMAGE_PREFIX }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
