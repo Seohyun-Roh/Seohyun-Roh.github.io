@@ -18,7 +18,7 @@ function Account({ who, children }: Props) {
         marginTop: '32px',
         marginX: 'auto',
         width: 'full',
-        maxWidth: '320px',
+        maxWidth: '340px',
         backgroundColor: 'white',
       })}
     >
