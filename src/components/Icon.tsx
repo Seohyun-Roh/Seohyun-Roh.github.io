@@ -7,7 +7,7 @@ interface Props {
   size?: number
 }
 
-function Icon({ name, color, fill, size }: Props) {
+function Icon({ name, color, fill = 'none', size }: Props) {
   const LucideIcon = icons[name]
 
   return <LucideIcon color={color} fill={fill} size={size} />
