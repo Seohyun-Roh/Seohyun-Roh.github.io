@@ -3,13 +3,14 @@ import { icons } from 'lucide-react'
 interface Props {
   name: keyof typeof icons
   color?: string
+  fill?: string
   size?: number
 }
 
-function Icon({ name, color, size }: Props) {
+function Icon({ name, color, fill, size }: Props) {
   const LucideIcon = icons[name]
 
-  return <LucideIcon color={color} size={size} />
+  return <LucideIcon color={color} fill={fill} size={size} />
 }
 
 export default Icon
