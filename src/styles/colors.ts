@@ -13,10 +13,10 @@ export const colors = {
   },
   bg: {
     100: { value: '#F6F5F2' },
-    900: { value: 'F0EBE3' },
+    900: { value: '#F0EBE3' },
   },
   main: {
-    100: { value: '#F3D0D7' },
-    900: { value: '#FFEFEF' },
+    100: { value: '#FFF5F5' },
+    900: { value: '#F3D0D7' },
   },
 }
