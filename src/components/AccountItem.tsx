@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { flex } from '../../styled-system/patterns'
-import Icon from './Icon'
 import { icons } from 'lucide-react'
+import { flex } from '../../styled-system/patterns'
 import { css } from '../../styled-system/css'
+
+import Icon from './Icon'
 
 interface Props {
   name: string

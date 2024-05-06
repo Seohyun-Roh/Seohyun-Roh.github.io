@@ -1,10 +1,7 @@
 import { css } from '../styled-system/css'
 import { center, flex, grid } from '../styled-system/patterns'
 
-import Account from './components/Account'
-import AccountItem from './components/AccountItem'
-import Icon from './components/Icon'
-import Maps from './components/Maps'
+import { Account, AccountItem, Icon, Maps } from './components'
 
 function App() {
   const images = [

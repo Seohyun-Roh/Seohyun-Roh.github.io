@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react'
-
 import { css } from '../../styled-system/css'
 import { flex } from '../../styled-system/patterns'
+
 import Icon from './Icon'
 
 interface Props {
