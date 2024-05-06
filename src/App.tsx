@@ -1,9 +1,19 @@
+import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { css } from '../styled-system/css'
 import { center, flex, grid } from '../styled-system/patterns'
 
 import { Account, AccountItem, Icon, Maps, Transportation, TransportationItem } from './components'
 
 function App() {
+  const [searchParams] = useSearchParams()
+
+  const [rehearse, setRehearse] = useState(false)
+
+  useEffect(() => {
+    if (searchParams.get('rehearse')) setRehearse(true)
+  }, [searchParams])
+
   const images = [
     '2FbetZAy%2FbtsGPamnnie%2Fn81nJ4RC8jeY20oKAyvGBk%2Fimg.jpg',
     '2FbSiXGw%2FbtsGNs2AGr2%2FBWOk3Rfx1Ul5RBSw3f8nJ0%2Fimg.jpg',
@@ -83,8 +93,24 @@ function App() {
                 <span>노지수</span>
               </p>
 
-              <p>2024년 6월 22일(토) 11시</p>
-              <p>대전 유성컨벤션 웨딩홀 2층 팰리스 홀</p>
+              <div>
+                {rehearse && <p>본식</p>}
+                <p className={css(rehearse && { fontSize: '15px' })}>
+                  2024년 6월 22일(토) 11시
+                  <br />
+                  대전 유성컨벤션 웨딩홀 2층 팰리스 홀
+                </p>
+              </div>
+
+              {rehearse && (
+                <div className={css({ marginTop: '18px' })}>
+                  <p>피로연</p>
+                  <p className={css(rehearse && { fontSize: '15px' })}>
+                    2024년 6월 8일(토) 18시 <br />
+                    통영 베이웨딩홀 2층
+                  </p>
+                </div>
+              )}
             </div>
           </section>
 
@@ -185,11 +211,24 @@ function App() {
               오시는 길
             </h2>
 
+            {rehearse && (
+              <p
+                className={css({
+                  marginTop: '18px',
+                  marginBottom: '2px',
+                  fontSize: '18px',
+                  textAlign: 'center',
+                })}
+              >
+                본식
+              </p>
+            )}
+
             <p className={css({ marginBottom: '32px', fontSize: '14px', textAlign: 'center' })}>
               대전광역시 유성구 온천북로 77
             </p>
 
-            <Maps />
+            <Maps lat={36.356586} lng={127.351549} />
 
             <div className={css({ marginTop: '32px', paddingX: '20px' })}>
               <Transportation name="대중교통">
@@ -219,6 +258,43 @@ function App() {
                 />
               </Transportation>
             </div>
+
+            {rehearse && (
+              <>
+                <hr
+                  className={css({
+                    marginTop: '32px',
+                    marginX: '20px',
+                    marginBottom: '24px',
+                    border: 'none',
+                    height: '1px',
+                    backgroundColor: 'gray.200',
+                  })}
+                />
+
+                <p
+                  className={css({
+                    marginBottom: '2px',
+                    fontSize: '18px',
+                    textAlign: 'center',
+                  })}
+                >
+                  피로연
+                </p>
+                <p className={css({ marginBottom: '32px', fontSize: '14px', textAlign: 'center' })}>
+                  경남 통영시 도남로 257-93
+                </p>
+
+                <Maps lat={34.829349} lng={128.43273} />
+
+                <div className={css({ marginTop: '32px', paddingX: '20px' })}>
+                  <Transportation name="">
+                    <TransportationItem icon="CarFront" description="도남동 유람선터미널 옆" />
+                    <TransportationItem icon="SquareParking" description="무료주차 100대 가능" />
+                  </Transportation>
+                </div>
+              </>
+            )}
           </section>
 
           <section className={css({ paddingY: '48px', backgroundColor: 'main.100' })}>
@@ -254,15 +330,25 @@ function App() {
 
       <footer
         className={css({
-          marginTop: '62px',
-          paddingX: '6px',
-          paddingY: '12px',
           fontSize: '11px',
           textAlign: 'right',
           color: 'gray.400',
+          backgroundColor: 'bg.100',
         })}
       >
-        개발, 디자인 노서현
+        <div
+          className={css({
+            marginX: 'auto',
+            paddingTop: '62px',
+            paddingX: '6px',
+            paddingY: '12px',
+            width: 'full',
+            maxWidth: '768px',
+            backgroundColor: 'gray.50',
+          })}
+        >
+          개발, 디자인 노서현
+        </div>
       </footer>
     </>
   )
