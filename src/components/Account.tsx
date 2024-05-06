@@ -2,7 +2,7 @@ import { ReactNode, useState } from 'react'
 
 import { css } from '../../styled-system/css'
 import { flex } from '../../styled-system/patterns'
-import { ChevronDown } from 'lucide-react'
+import Icon from './Icon'
 
 interface Props {
   who: string
@@ -30,11 +30,12 @@ function Account({ who, children }: Props) {
           justify: 'space-between',
           paddingY: '12px',
           paddingX: '16px',
+          fontSize: '17px',
           width: 'full',
         })}
       >
         {who}측 계좌번호
-        <ChevronDown size={16} strokeWidth={1} />
+        <Icon name={isOpen ? 'ChevronUp' : 'ChevronDown'} size={16} strokeWidth={1.5} />
       </button>
 
       {isOpen && <>{children}</>}
