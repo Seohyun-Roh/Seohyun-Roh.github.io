@@ -14,7 +14,7 @@ export const globalCss = defineGlobalStyles({
 
     lineHeight: 1.5,
     fontWeight: 400,
-    color: 'gray.900',
+    color: 'gray.800',
   },
 
   button: {
