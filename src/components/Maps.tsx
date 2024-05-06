@@ -11,9 +11,9 @@ function Maps() {
   return (
     <>
       {loading ? (
-        <div className={css({ width: 'full', height: '340px' })}>지도 불러오는 중..</div>
+        <div className={css({ width: 'full', height: '300px' })}>지도 불러오는 중..</div>
       ) : (
-        <Map center={{ lat: 36.356586, lng: 127.351549 }} style={{ width: '100%', height: '340px' }} level={2}>
+        <Map center={{ lat: 36.356586, lng: 127.351549 }} style={{ width: '100%', height: '300px' }} level={2}>
           <MapMarker
             position={{
               lat: 36.356586,
@@ -22,13 +22,13 @@ function Maps() {
             image={{
               src: MapPin,
               size: {
-                width: 26,
-                height: 32,
+                width: 22,
+                height: 28,
               },
               options: {
                 offset: {
-                  x: 13,
-                  y: 38,
+                  x: 12,
+                  y: 34,
                 },
               },
             }}

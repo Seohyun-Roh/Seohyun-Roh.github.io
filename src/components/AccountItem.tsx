@@ -17,16 +17,17 @@ function AccountItem({ name, account }: Props) {
     <div
       className={flex({
         align: 'center',
-        gap: '10px',
+        gap: '9px',
         borderTopWidth: '1px',
         borderTopColor: 'gray.200',
         paddingLeft: '16px',
         paddingY: '14px',
         paddingRight: '15px',
+        fontSize: '15px',
         '& + &': { borderTopColor: 'gray.100' },
       })}
     >
-      <div className={css({ flex: 'none', width: '44px' })}>{name}</div>
+      <div className={css({ flex: 'none', width: '45px' })}>{name}</div>
 
       <div className={flex({ align: 'center', justify: 'space-between', width: 'full' })}>
         <p>{account}</p>
@@ -35,10 +36,10 @@ function AccountItem({ name, account }: Props) {
           type="button"
           className={flex({
             align: 'center',
-            gap: '5px',
+            gap: '4px',
             flex: 'none',
             paddingY: '3px',
-            paddingX: '8px',
+            paddingX: '7px',
             fontSize: '13px',
             color: 'gray.600',
             backgroundColor: 'gray.100',

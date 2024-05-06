@@ -1,7 +1,7 @@
 import { css } from '../styled-system/css'
 import { center, flex, grid } from '../styled-system/patterns'
 
-import { Account, AccountItem, Icon, Maps } from './components'
+import { Account, AccountItem, Icon, Maps, Transportation, TransportationItem } from './components'
 
 function App() {
   const images = [
@@ -26,7 +26,6 @@ function App() {
           className={css({
             flexGrow: '1',
             marginX: 'auto',
-            paddingBottom: '96px',
             width: 'full',
             maxWidth: '768px',
             backgroundColor: 'gray.50',
@@ -44,8 +43,9 @@ function App() {
             <h1
               className={css({
                 marginBottom: '32px',
-                fontSize: 'clamp(20px, 5vw, 32px)',
+                fontSize: 'clamp(22px, 5vw, 32px)',
                 textAlign: 'center',
+                fontWeight: 'bold',
                 color: 'gray.900',
                 letterSpacing: '1px',
               })}
@@ -72,7 +72,7 @@ function App() {
                 className={center({
                   gap: '6px',
                   marginBottom: '14px',
-                  fontSize: 'min(5vw, 20px)',
+                  fontSize: 'min(5vw, 18px)',
                   textAlign: 'center',
                   color: 'gray.900',
                   width: 'full',
@@ -109,13 +109,13 @@ function App() {
             </p>
 
             <div className={css({ marginTop: '38px', fontSize: '17px' })}>
-              <div className={flex({ align: 'center', gap: '2px', marginX: 'auto', fontSize: '18px', width: 'fit' })}>
+              <div className={flex({ align: 'center', gap: '4px', marginX: 'auto', fontSize: '18px', width: 'fit' })}>
                 <span>김덕만 · 박지선</span>
                 <span className={css({ display: 'inline-block', fontSize: '14px', width: '44px' })}>의 아들</span>{' '}
                 김현곤
               </div>
 
-              <div className={flex({ align: 'center', gap: '2px', marginX: 'auto', fontSize: '18px', width: 'fit' })}>
+              <div className={flex({ align: 'center', gap: '4px', marginX: 'auto', fontSize: '18px', width: 'fit' })}>
                 <span>노국현 · 지주영</span>
                 <span className={css({ display: 'inline-block', fontSize: '14px', width: '44px' })}>의 딸</span> 노지수
               </div>
@@ -128,6 +128,7 @@ function App() {
                 marginY: '32px',
                 fontSize: '20px',
                 textAlign: 'center',
+                fontWeight: 'bold',
               })}
             >
               마음 전하실 곳
@@ -178,6 +179,7 @@ function App() {
                 marginBottom: '6px',
                 fontSize: '20px',
                 textAlign: 'center',
+                fontWeight: 'bold',
               })}
             >
               오시는 길
@@ -189,56 +191,33 @@ function App() {
 
             <Maps />
 
-            <div className={css({ marginTop: '32px', paddingX: '20px', fontSize: '15px' })}>
-              <div className={css({ marginBottom: '18px' })}>
-                <p className={css({ marginBottom: '6px', fontSize: '18px' })}>대중교통</p>
-                <p className={flex({ gap: '6px' })}>
-                  <div className={css({ flex: 'none', marginTop: '4px' })}>
-                    <Icon name="Bus" size={16} />
-                  </div>
-                  <span>
-                    시내버스 <strong className={css({ color: 'black' })}>102, 108, 706, 106, 113</strong> 탑승 후
-                    홈플러스 유성점 하차
-                  </span>
-                </p>
-                <p className={flex({ gap: '6px', marginTop: '4px' })}>
-                  <div className={css({ flex: 'none', marginTop: '4px' })}>
-                    <Icon name="TrainFront" size={16} />
-                  </div>
-                  <span>지하철 1호선 갑천역 3번 출구</span>
-                </p>
-              </div>
-              <div className={css({ marginBottom: '18px' })}>
-                <p className={css({ marginBottom: '6px', fontSize: '18px' })}>자가차량</p>
-                <p className={flex({ gap: '6px' })}>
-                  <div className={css({ flex: 'none', marginTop: '4px' })}>
-                    <Icon name="CarFront" size={16} />
-                  </div>
-                  <span>유성 IC 홈플러스 유성점 갑천변 유성컨벤션웨딩홀</span>
-                </p>
-                <p className={flex({ gap: '6px', marginTop: '4px' })}>
-                  <div className={css({ flex: 'none', marginTop: '4px' })}>
-                    <Icon name="SquareParking" size={16} />
-                  </div>
-                  <span>유성컨벤션 건물 주차장 또는 맞은편 부지 공간 주차 가능</span>
-                </p>
-              </div>
+            <div className={css({ marginTop: '32px', paddingX: '20px' })}>
+              <Transportation name="대중교통">
+                <TransportationItem
+                  icon="Bus"
+                  description="시내버스 102, 108, 706, 106, 113 탑승 후
+                    홈플러스 유성점 하차"
+                />
+                <TransportationItem icon="TrainFront" description="지하철 1호선 갑천역 3번 출구" />
+              </Transportation>
+              <Transportation name="자가차량">
+                <TransportationItem icon="CarFront" description="유성 IC > 홈플러스 유성점 > 갑천변 유성컨벤션웨딩홀" />
+                <TransportationItem
+                  icon="SquareParking"
+                  description="유성컨벤션 건물 주차장 또는 맞은편 부지 공간 주차 가능"
+                />
+              </Transportation>
 
-              <div>
-                <p className={css({ marginTop: '18px', marginBottom: '6px', fontSize: '18px' })}>고속버스</p>
-                <p className={flex({ gap: '6px' })}>
-                  <div className={css({ flex: 'none', marginTop: '4px' })}>
-                    <Icon name="BusFront" size={16} />
-                  </div>
-                  <span>대전고속버스터미널 - 버스 102, 106 탑승 후 홈플러스 유성점 하차</span>
-                </p>
-                <p className={flex({ gap: '6px', marginTop: '4px' })}>
-                  <div className={css({ flex: 'none', marginTop: '4px' })}>
-                    <Icon name="BusFront" size={16} />
-                  </div>
-                  <span>유성고속버스터미널 - 도보 500m 후 102 버스 탑승, 홈플러스 유성점 하차</span>
-                </p>
-              </div>
+              <Transportation name="고속버스">
+                <TransportationItem
+                  icon="BusFront"
+                  description="대전고속버스터미널 - 버스 102, 106 탑승 후 홈플러스 유성점 하차"
+                />
+                <TransportationItem
+                  icon="BusFront"
+                  description="유성고속버스터미널 - 도보 500m 후 102 버스 탑승, 홈플러스 유성점 하차"
+                />
+              </Transportation>
             </div>
           </section>
 
@@ -249,6 +228,7 @@ function App() {
                 paddingY: '8px',
                 fontSize: '20px',
                 textAlign: 'center',
+                fontWeight: 'bold',
                 backgroundColor: 'white',
               })}
             >
@@ -271,6 +251,19 @@ function App() {
           </section>
         </article>
       </main>
+
+      <footer
+        className={css({
+          marginTop: '62px',
+          paddingX: '6px',
+          paddingY: '12px',
+          fontSize: '11px',
+          textAlign: 'right',
+          color: 'gray.400',
+        })}
+      >
+        개발, 디자인 노서현
+      </footer>
     </>
   )
 }
