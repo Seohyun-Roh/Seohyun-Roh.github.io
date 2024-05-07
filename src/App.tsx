@@ -63,7 +63,7 @@ function App() {
               결혼합니다
             </h1>
 
-            <div className={center({ marginX: '-20px', paddingX: '30px' })}>
+            <div className={center({ marginX: '-20px', paddingX: '20px' })}>
               <img
                 src={`${import.meta.env.VITE_IMAGE_PREFIX}2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg`}
                 alt="대문 이미지"
@@ -143,12 +143,18 @@ function App() {
           <section
             className={css({
               paddingY: '48px',
-              paddingX: '20px',
+              paddingX: '16px',
               backgroundColor: 'main.100',
             })}
           >
             <p
-              className={css({ marginBottom: '10px', textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}
+              className={css({
+                marginBottom: '10px',
+                fontSize: '17px',
+                textAlign: 'center',
+                lineHeight: '1.55',
+                wordBreak: 'keep-all',
+              })}
             >
               결혼은 새로운 인생의 시작이라고 합니다.
               <br />
@@ -156,7 +162,7 @@ function App() {
               <br />
               진실한 가약을 맺고자 합니다.
             </p>
-            <p className={css({ textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}>
+            <p className={css({ fontSize: '17px', textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}>
               함께 자리하여 저희가 내딛는 새 인생의 첫 걸음을
               <br />
               축복해 주시면 감사하겠습니다.
@@ -205,9 +211,8 @@ function App() {
                 direction: 'column',
                 gap: '12px',
                 marginTop: '48px',
-                paddingLeft: '12px',
-                paddingX: '20px',
-                paddingRight: '8px',
+                paddingLeft: '32px',
+                paddingRight: '28px',
               })}
             >
               <div className={flex({ align: 'center', justify: 'space-between' })}>
