@@ -322,9 +322,9 @@ function App() {
               <>
                 <hr
                   className={css({
-                    marginTop: '32px',
+                    marginTop: '52px',
                     marginX: '20px',
-                    marginBottom: '24px',
+                    marginBottom: '48px',
                     border: 'none',
                     height: '1px',
                     backgroundColor: 'gray.200',
