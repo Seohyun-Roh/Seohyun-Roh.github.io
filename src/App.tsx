@@ -34,6 +34,7 @@ function App() {
       >
         <article
           className={css({
+            position: 'relative',
             flexGrow: '1',
             marginX: 'auto',
             width: 'full',
@@ -52,18 +53,39 @@ function App() {
           >
             <h1
               className={css({
-                marginBottom: '32px',
-                fontSize: 'clamp(26px, 5vw, 32px)',
-                textAlign: 'center',
-                fontWeight: 'bold',
+                marginTop: '30px',
+                marginBottom: '4px',
+                fontSize: 'clamp(21px, 5vw, 29px)',
                 color: 'gray.900',
                 letterSpacing: '1px',
+                fontFamily: 'kreon',
               })}
             >
-              결혼합니다
+              Kim Hyun Gone
+              <br />
+              Rho Ji Su
             </h1>
 
             <div className={center({ marginX: '-20px', paddingX: '20px' })}>
+              <p
+                className={css({
+                  position: 'absolute',
+                  top: '18px',
+                  right: '16px',
+                  fontFamily: 'parisienne',
+                  fontSize: 'clamp(56px, 7vw, 58px)',
+                  textAlign: 'right',
+                  color: '#944C33',
+                  lineHeight: '1',
+                  letterSpacing: '4px',
+                })}
+              >
+                Save
+                <br />
+                The
+                <br />
+                Date
+              </p>
               <Image
                 src={`${import.meta.env.VITE_IMAGE_PREFIX}2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg`}
                 alt="대문 이미지"
@@ -82,15 +104,15 @@ function App() {
                 className={center({
                   gap: '6px',
                   marginBottom: '14px',
-                  fontSize: 'min(5vw, 20px)',
+                  fontSize: 'clamp(20px, 5vw, 28px)',
                   textAlign: 'center',
                   color: 'gray.900',
                   width: 'full',
                 })}
               >
-                <span>김현곤</span>
                 <Icon name="Heart" fill="#ff5245" color="#ff5245" size={14} />
-                <span>노지수</span>
+                <span>결혼합니다</span>
+                <Icon name="Heart" fill="#ff5245" color="#ff5245" size={14} />
               </p>
 
               <div>
@@ -100,6 +122,7 @@ function App() {
                       align: 'center',
                       justify: 'center',
                       gap: '4px',
+                      marginTop: '26px',
                       marginBottom: '2px',
                       fontSize: '18px',
                     })}
@@ -117,7 +140,7 @@ function App() {
               </div>
 
               {rehearse && (
-                <div className={css({ marginTop: '24px' })}>
+                <div className={css({ marginTop: '32px' })}>
                   <p
                     className={flex({
                       align: 'center',
@@ -142,7 +165,7 @@ function App() {
 
           <section
             className={css({
-              paddingY: '48px',
+              paddingY: '72px',
               paddingX: '16px',
               backgroundColor: 'main.100',
             })}
@@ -150,7 +173,7 @@ function App() {
             <p
               className={css({
                 marginBottom: '10px',
-                fontSize: '17px',
+                fontSize: '18px',
                 textAlign: 'center',
                 lineHeight: '1.55',
                 wordBreak: 'keep-all',
@@ -162,20 +185,20 @@ function App() {
               <br />
               진실한 가약을 맺고자 합니다.
             </p>
-            <p className={css({ fontSize: '17px', textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}>
+            <p className={css({ fontSize: '18px', textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}>
               함께 자리하여 저희가 내딛는 새 인생의 첫 걸음을
               <br />
               축복해 주시면 감사하겠습니다.
             </p>
 
             <div className={css({ marginTop: '38px', fontSize: '17px' })}>
-              <div className={flex({ align: 'center', gap: '4px', marginX: 'auto', fontSize: '18px', width: 'fit' })}>
+              <div className={flex({ align: 'center', gap: '4px', marginX: 'auto', width: 'fit' })}>
                 <span>김덕만 · 박지선</span>
                 <span className={css({ display: 'inline-block', fontSize: '14px', width: '44px' })}>의 아들</span>{' '}
                 김현곤
               </div>
 
-              <div className={flex({ align: 'center', gap: '4px', marginX: 'auto', fontSize: '18px', width: 'fit' })}>
+              <div className={flex({ align: 'center', gap: '4px', marginX: 'auto', width: 'fit' })}>
                 <span>노국현 · 지주영</span>
                 <span className={css({ display: 'inline-block', fontSize: '14px', width: '44px' })}>의 딸</span> 노지수
               </div>
@@ -233,7 +256,7 @@ function App() {
             </div>
           </section>
 
-          <section className={css({ paddingTop: '80px', paddingBottom: '48px', backgroundColor: 'white' })}>
+          <section className={css({ paddingY: '80px', backgroundColor: 'white' })}>
             <h2
               className={css({
                 marginBottom: '6px',
@@ -336,11 +359,11 @@ function App() {
             )}
           </section>
 
-          <section className={css({ paddingY: '48px', backgroundColor: 'main.100' })}>
+          <section className={css({ paddingY: '62px', backgroundColor: 'main.100' })}>
             <h2
               className={css({
                 marginBottom: '24px',
-                paddingY: '8px',
+                paddingY: '9px',
                 fontSize: '22px',
                 textAlign: 'center',
                 fontWeight: 'bold',

@@ -5,3 +5,19 @@
   font-weight: 400 700;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Parisienne';
+  src: url('https://fonts.googleapis.com/css2?family=Parisienne') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kreon';
+  src: url('https://fonts.googleapis.com/css2?family=Kreon') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

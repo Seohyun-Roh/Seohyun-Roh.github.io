@@ -9,6 +9,7 @@
     "lucide",
     "outdir",
     "pandacss",
+    "Parisienne",
     "weddinghgjs"
   ],
   "cSpell.ignorePaths": ["**/node_modules/**", "**/dist/**", "**/build/**", "pnpm-lock.yaml"]
