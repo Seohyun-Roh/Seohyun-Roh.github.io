@@ -38,6 +38,8 @@ jobs:
         env:
           VITE_API_KAKAO_KEY: ${{ secrets.VITE_API_KAKAO_KEY }}
           VITE_IMAGE_PREFIX: ${{ secrets.VITE_IMAGE_PREFIX }}
+          VITE_PHONE_NUMBER_1: ${{ secrets.VITE_PHONE_NUMBER_1 }}
+          VITE_PHONE_NUMBER_2: ${{ secrets.VITE_PHONE_NUMBER_2 }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
