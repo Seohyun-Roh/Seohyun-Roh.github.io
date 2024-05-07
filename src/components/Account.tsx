@@ -28,9 +28,10 @@ function Account({ who, children }: Props) {
         className={flex({
           align: 'center',
           justify: 'space-between',
+          paddingLeft: '14px',
           paddingY: '12px',
-          paddingX: '16px',
-          fontSize: '17px',
+          paddingRight: '13px',
+          fontSize: '18px',
           width: 'full',
         })}
       >

@@ -11,7 +11,7 @@ interface Props {
 
 export function TransportItem({ icon, description }: Props) {
   return (
-    <p className={flex({ gap: '6px', fontSize: '15px', '& + &': { marginTop: '4px' } })}>
+    <p className={flex({ gap: '6px', '& + &': { marginTop: '4px' } })}>
       <div className={css({ flex: 'none', marginTop: '4px' })}>
         <Icon name={icon} size={16} />
       </div>

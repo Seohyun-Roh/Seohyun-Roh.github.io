@@ -20,10 +20,9 @@ function AccountItem({ name, account }: Props) {
         gap: '9px',
         borderTopWidth: '1px',
         borderTopColor: 'gray.200',
-        paddingLeft: '16px',
+        paddingLeft: '14px',
         paddingY: '14px',
-        paddingRight: '15px',
-        fontSize: '15px',
+        paddingRight: '13px',
         '& + &': { borderTopColor: 'gray.100' },
       })}
     >

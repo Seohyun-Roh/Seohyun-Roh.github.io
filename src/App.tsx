@@ -53,7 +53,7 @@ function App() {
             <h1
               className={css({
                 marginBottom: '32px',
-                fontSize: 'clamp(22px, 5vw, 32px)',
+                fontSize: 'clamp(26px, 5vw, 32px)',
                 textAlign: 'center',
                 fontWeight: 'bold',
                 color: 'gray.900',
@@ -82,7 +82,7 @@ function App() {
                 className={center({
                   gap: '6px',
                   marginBottom: '14px',
-                  fontSize: 'min(5vw, 18px)',
+                  fontSize: 'min(5vw, 20px)',
                   textAlign: 'center',
                   color: 'gray.900',
                   width: 'full',
@@ -94,8 +94,22 @@ function App() {
               </p>
 
               <div>
-                {rehearse && <p>본식</p>}
-                <p className={css(rehearse && { fontSize: '15px' })}>
+                {rehearse && (
+                  <p
+                    className={flex({
+                      align: 'center',
+                      justify: 'center',
+                      gap: '4px',
+                      marginBottom: '2px',
+                      fontSize: '18px',
+                    })}
+                  >
+                    <Icon name="Sparkles" size={14} color="#FFD694" fill="#FFD694" />
+                    본식
+                    <Icon name="Sparkles" size={14} color="#FFD694" fill="#FFD694" />
+                  </p>
+                )}
+                <p className={css(rehearse && { fontSize: '16px' })}>
                   2024년 6월 22일(토) 11시
                   <br />
                   대전 유성컨벤션 웨딩홀 2층 팰리스 홀
@@ -103,9 +117,21 @@ function App() {
               </div>
 
               {rehearse && (
-                <div className={css({ marginTop: '18px' })}>
-                  <p>피로연</p>
-                  <p className={css(rehearse && { fontSize: '15px' })}>
+                <div className={css({ marginTop: '24px' })}>
+                  <p
+                    className={flex({
+                      align: 'center',
+                      justify: 'center',
+                      gap: '4px',
+                      marginBottom: '2px',
+                      fontSize: '18px',
+                    })}
+                  >
+                    <Icon name="Sparkles" size={14} color="#FFD694" fill="#FFD694" />
+                    피로연
+                    <Icon name="Sparkles" size={14} color="#FFD694" fill="#FFD694" />
+                  </p>
+                  <p className={css({ fontSize: '16px' })}>
                     2024년 6월 8일(토) 18시 <br />
                     통영 베이웨딩홀 2층
                   </p>
@@ -121,14 +147,16 @@ function App() {
               backgroundColor: 'main.100',
             })}
           >
-            <p className={css({ marginBottom: '10px', textAlign: 'center', lineHeight: '1.55' })}>
+            <p
+              className={css({ marginBottom: '10px', textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}
+            >
               결혼은 새로운 인생의 시작이라고 합니다.
               <br />
               저희 두 사람이 백년해로의
               <br />
               진실한 가약을 맺고자 합니다.
             </p>
-            <p className={css({ textAlign: 'center', lineHeight: '1.55' })}>
+            <p className={css({ textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}>
               함께 자리하여 저희가 내딛는 새 인생의 첫 걸음을
               <br />
               축복해 주시면 감사하겠습니다.
@@ -148,11 +176,11 @@ function App() {
             </div>
           </section>
 
-          <section className={css({ paddingTop: '48px', paddingX: '20px', paddingBottom: '62px' })}>
+          <section className={css({ paddingTop: '48px', paddingBottom: '62px' })}>
             <h2
               className={css({
                 marginY: '32px',
-                fontSize: '20px',
+                fontSize: '22px',
                 textAlign: 'center',
                 fontWeight: 'bold',
               })}
@@ -178,20 +206,21 @@ function App() {
                 gap: '12px',
                 marginTop: '48px',
                 paddingLeft: '12px',
+                paddingX: '20px',
                 paddingRight: '8px',
               })}
             >
               <div className={flex({ align: 'center', justify: 'space-between' })}>
-                <p className={css({ fontSize: '15px' })}>신부에게 연락하기</p>
+                <p>신부에게 연락하기</p>
                 <a href={`tel:${import.meta.env.VITE_PHONE_NUMBER_1}`} className={css({ padding: '4px' })}>
                   <Icon name="Phone" size={13} fill="#FB98AC" color="#FB98AC" />
                 </a>
               </div>
 
-              <hr className={css({ border: 'none', width: 'full', height: '1px', backgroundColor: 'gray.100' })} />
+              <hr className={css({ border: 'none', width: 'full', height: '1px', backgroundColor: 'gray.200' })} />
 
               <div className={flex({ align: 'center', justify: 'space-between' })}>
-                <p className={css({ fontSize: '15px' })}>신랑에게 연락하기</p>
+                <p>신랑에게 연락하기</p>
                 <a href={`tel:${import.meta.env.VITE_PHONE_NUMBER_2}`} className={css({ padding: '4px' })}>
                   <Icon name="Phone" size={13} fill="#FB98AC" color="#FB98AC" />
                 </a>
@@ -203,7 +232,7 @@ function App() {
             <h2
               className={css({
                 marginBottom: '6px',
-                fontSize: '20px',
+                fontSize: '22px',
                 textAlign: 'center',
                 fontWeight: 'bold',
               })}
@@ -213,20 +242,22 @@ function App() {
 
             {rehearse && (
               <p
-                className={css({
+                className={flex({
+                  align: 'center',
+                  justify: 'center',
+                  gap: '4px',
                   marginTop: '18px',
                   marginBottom: '2px',
                   fontSize: '18px',
-                  textAlign: 'center',
                 })}
               >
+                <Icon name="Sparkles" size={14} color="#FFD694" fill="#FFD694" />
                 본식
+                <Icon name="Sparkles" size={14} color="#FFD694" fill="#FFD694" />
               </p>
             )}
 
-            <p className={css({ marginBottom: '32px', fontSize: '14px', textAlign: 'center' })}>
-              대전광역시 유성구 온천북로 77
-            </p>
+            <p className={css({ marginBottom: '32px', textAlign: 'center' })}>대전광역시 유성구 온천북로 77</p>
 
             <Maps lat={36.356586} lng={127.351549} />
 
@@ -273,17 +304,20 @@ function App() {
                 />
 
                 <p
-                  className={css({
+                  className={flex({
+                    align: 'center',
+                    justify: 'center',
+                    gap: '4px',
                     marginBottom: '2px',
                     fontSize: '18px',
-                    textAlign: 'center',
                   })}
                 >
+                  <Icon name="Sparkles" size={14} color="#FFD694" fill="#FFD694" />
                   피로연
+                  <Icon name="Sparkles" size={14} color="#FFD694" fill="#FFD694" />
                 </p>
-                <p className={css({ marginBottom: '32px', fontSize: '14px', textAlign: 'center' })}>
-                  경남 통영시 도남로 257-93
-                </p>
+
+                <p className={css({ marginBottom: '32px', textAlign: 'center' })}>경남 통영시 도남로 257-93</p>
 
                 <Maps lat={34.829349} lng={128.43273} />
 
@@ -302,7 +336,7 @@ function App() {
               className={css({
                 marginBottom: '24px',
                 paddingY: '8px',
-                fontSize: '20px',
+                fontSize: '22px',
                 textAlign: 'center',
                 fontWeight: 'bold',
                 backgroundColor: 'white',

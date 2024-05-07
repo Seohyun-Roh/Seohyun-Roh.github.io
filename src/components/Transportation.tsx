@@ -9,7 +9,7 @@ interface Props {
 export function Transportation({ name, children }: Props) {
   return (
     <div className={css({ '& + &': { marginTop: '18px' } })}>
-      <p className={css({ marginBottom: '6px', fontSize: '17px' })}>{name}</p>
+      <p className={css({ marginBottom: '7px', fontSize: '18px' })}>{name}</p>
 
       {children}
     </div>
