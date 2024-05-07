@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { css } from '../styled-system/css'
 import { center, flex, grid } from '../styled-system/patterns'
 
-import { Account, AccountItem, Icon, Maps, Transportation, TransportationItem } from './components'
+import { Account, AccountItem, Icon, Image, Maps, Transportation, TransportationItem } from './components'
 
 function App() {
   const [searchParams] = useSearchParams()
@@ -64,7 +64,7 @@ function App() {
             </h1>
 
             <div className={center({ marginX: '-20px', paddingX: '20px' })}>
-              <img
+              <Image
                 src={`${import.meta.env.VITE_IMAGE_PREFIX}2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg`}
                 alt="대문 이미지"
               />
@@ -354,10 +354,16 @@ function App() {
               {images.map((href, index) => {
                 return (
                   <li key={href}>
-                    <img
+                    <Image
                       src={`${import.meta.env.VITE_IMAGE_PREFIX}${href}`}
                       alt={`갤러리 이미지 ${index + 1}`}
-                      className={css({ width: 'full', height: 'full', aspectRatio: '3/4', objectFit: 'cover' })}
+                      style={css.raw({
+                        width: 'full',
+                        height: 'full',
+                        aspectRatio: '3/4',
+                        objectFit: 'cover',
+                        cursor: 'pointer',
+                      })}
                     />
                   </li>
                 )
