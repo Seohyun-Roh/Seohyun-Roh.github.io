@@ -7,6 +7,7 @@ import { Account, AccountItem, Icon, Image, Maps, Transportation, Transportation
 import Animate from './components/Animate'
 
 import Divider from './assets/image.png'
+import SaveTheDate from './assets/save-the-date.png'
 
 function App() {
   const [searchParams] = useSearchParams()
@@ -70,25 +71,16 @@ function App() {
             </h1>
 
             <div className={center({ marginX: '-20px', paddingX: '20px' })}>
-              <p
+              <img
+                src={SaveTheDate}
+                alt="save-the-date"
                 className={css({
                   position: 'absolute',
                   top: '18px',
-                  right: '16px',
-                  fontFamily: 'parisienne',
-                  fontSize: 'clamp(56px, 7vw, 58px)',
-                  textAlign: 'right',
-                  color: '#944C33',
-                  lineHeight: '1',
-                  letterSpacing: '4px',
+                  right: '10px',
+                  width: 'clamp(150px, 40vw, 220px)',
                 })}
-              >
-                Save
-                <br />
-                The
-                <br />
-                Date
-              </p>
+              />
               <Image
                 src={`${import.meta.env.VITE_IMAGE_PREFIX}2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg`}
                 alt="대문 이미지"
