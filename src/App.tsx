@@ -53,7 +53,7 @@ function App() {
                 fontSize: 'clamp(21px, 5vw, 29px)',
                 color: 'gray.900',
                 letterSpacing: '1px',
-                fontFamily: 'baloo',
+                fontFamily: 'maruburi',
               })}
             >
               Kim Hyun Gone

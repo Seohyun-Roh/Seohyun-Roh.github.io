@@ -7,17 +7,9 @@
 }
 
 @font-face {
-  font-family: 'Parisienne';
-  src: url('https://fonts.googleapis.com/css2?family=Parisienne') format('woff2');
+  font-family: 'MaruBuri-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Baloo Bhaina 2';
-  src: url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
   font-display: swap;
 }
