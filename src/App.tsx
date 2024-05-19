@@ -61,17 +61,18 @@ function App() {
               Rho Ji Su
             </h1>
 
+            <img
+              src={SaveTheDate}
+              alt="save-the-date"
+              className={css({
+                position: 'absolute',
+                top: '18px',
+                right: '10px',
+                width: 'clamp(150px, 40vw, 220px)',
+              })}
+            />
+
             <div className={center({ marginX: '-20px', paddingX: '20px' })}>
-              <img
-                src={SaveTheDate}
-                alt="save-the-date"
-                className={css({
-                  position: 'absolute',
-                  top: '18px',
-                  right: '10px',
-                  width: 'clamp(150px, 40vw, 220px)',
-                })}
-              />
               <Image
                 src={`${import.meta.env.VITE_IMAGE_PREFIX}2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg`}
                 alt="대문 이미지"
@@ -79,23 +80,31 @@ function App() {
             </div>
 
             <div
-              className={css({
-                marginTop: '54px',
-                fontSize: '17px',
-                textAlign: 'center',
-              })}
+              className={css(
+                {
+                  marginTop: '48px',
+                  textAlign: 'center',
+                },
+                rehearse && { marginTop: '86px' }
+              )}
             >
               <div className={css({ position: 'relative' })}>
                 <p
-                  className={center({
-                    gap: '6px',
-                    marginBottom: '14px',
-                    fontSize: 'clamp(20px, 5vw, 28px)',
-                    textAlign: 'center',
-                    fontWeight: 'bold',
-                    color: 'gray.900',
-                    width: 'full',
-                  })}
+                  className={css(
+                    {
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '6px',
+                      marginBottom: '14px',
+                      fontSize: 'clamp(20px, 5vw, 28px)',
+                      textAlign: 'center',
+                      fontWeight: 'bold',
+                      color: 'gray.900',
+                      width: 'full',
+                    },
+                    rehearse && { fontSize: 'clamp(22px, 5vw, 28px)' }
+                  )}
                 >
                   {!rehearse && <Icon name="Heart" fill="#ff5245" color="#ff5245" size={14} />}
                   <span>결혼합니다</span>
@@ -109,13 +118,13 @@ function App() {
                         align: 'center',
                         justify: 'center',
                         gap: '4px',
-                        marginTop: '32px',
-                        marginBottom: '2px',
+                        marginTop: '40px',
+                        marginBottom: '6px',
                         fontSize: '18px',
                         fontWeight: 'bold',
                       })}
                     >
-                      본식
+                      - 본식 -
                     </p>
                   )}
                   <p className={css(rehearse && { fontSize: '16px' })}>
@@ -126,18 +135,18 @@ function App() {
                 </div>
 
                 {rehearse && (
-                  <div className={css({ marginTop: '32px' })}>
+                  <div className={css({ marginTop: '32px', marginBottom: '38px' })}>
                     <p
                       className={flex({
                         align: 'center',
                         justify: 'center',
                         gap: '4px',
-                        marginBottom: '2px',
+                        marginBottom: '6px',
                         fontSize: '18px',
                         fontWeight: 'bold',
                       })}
                     >
-                      피로연
+                      - 피로연 -
                     </p>
                     <p className={css({ fontSize: '16px' })}>
                       2024년 6월 8일(토) 18시 <br />
@@ -151,18 +160,24 @@ function App() {
                     <img
                       src={Divider}
                       alt="image"
-                      className={css({ position: 'absolute', top: '-18px', left: '0', opacity: '0.7', width: '64px' })}
+                      className={css({
+                        position: 'absolute',
+                        top: '-40px',
+                        left: '-10px',
+                        opacity: '0.5',
+                        width: '70px',
+                      })}
                     />
                     <img
                       src={Divider}
                       alt="image"
                       className={css({
                         position: 'absolute',
-                        top: '-22px',
-                        right: '0',
+                        top: '-45px',
+                        right: '-7px',
                         rotate: '90deg',
-                        opacity: '0.7',
-                        width: '64px',
+                        opacity: '0.5',
+                        width: '70px',
                       })}
                     />
                     <img
@@ -170,11 +185,11 @@ function App() {
                       alt="image"
                       className={css({
                         position: 'absolute',
-                        bottom: '-18px',
-                        left: '0',
+                        bottom: '-47px',
+                        left: '-7px',
                         rotate: '270deg',
-                        opacity: '0.7',
-                        width: '64px',
+                        opacity: '0.5',
+                        width: '70px',
                       })}
                     />
                     <img
@@ -182,11 +197,11 @@ function App() {
                       alt="image"
                       className={css({
                         position: 'absolute',
-                        bottom: '-18px',
-                        right: '-3px',
+                        bottom: '-42px',
+                        right: '-14px',
                         rotate: '180deg',
-                        opacity: '0.7',
-                        width: '64px',
+                        opacity: '0.5',
+                        width: '70px',
                       })}
                     />
                   </>
@@ -303,7 +318,7 @@ function App() {
                 className={flex({
                   align: 'center',
                   justify: 'center',
-                  gap: '6px',
+                  gap: '8px',
                   marginBottom: '6px',
                   fontSize: '22px',
                   textAlign: 'center',
@@ -319,7 +334,7 @@ function App() {
                   className={flex({
                     align: 'center',
                     justify: 'center',
-                    gap: '4px',
+                    gap: '8px',
                     marginTop: '18px',
                     marginBottom: '2px',
                     fontSize: '18px',
@@ -338,6 +353,12 @@ function App() {
               <Maps lat={36.356586} lng={127.351549} />
 
               <div className={css({ marginTop: '32px', paddingX: '20px' })}>
+                <Transportation name="자가차량">
+                  <TransportationItem
+                    icon="SquareParking"
+                    description="유성컨벤션 건물 주차장 또는 맞은편 부지 공간 주차 가능"
+                  />
+                </Transportation>
                 <Transportation name="대중교통">
                   <TransportationItem
                     icon="Bus"
@@ -345,27 +366,6 @@ function App() {
                     홈플러스 유성점 하차"
                   />
                   <TransportationItem icon="TrainFront" description="지하철 1호선 갑천역 3번 출구" />
-                </Transportation>
-                <Transportation name="자가차량">
-                  <TransportationItem
-                    icon="CarFront"
-                    description="유성 IC > 홈플러스 유성점 > 갑천변 유성컨벤션웨딩홀"
-                  />
-                  <TransportationItem
-                    icon="SquareParking"
-                    description="유성컨벤션 건물 주차장 또는 맞은편 부지 공간 주차 가능"
-                  />
-                </Transportation>
-
-                <Transportation name="고속버스">
-                  <TransportationItem
-                    icon="BusFront"
-                    description="대전고속버스터미널 - 버스 102, 106 탑승 후 홈플러스 유성점 하차"
-                  />
-                  <TransportationItem
-                    icon="BusFront"
-                    description="유성고속버스터미널 - 도보 500m 후 102 버스 탑승, 홈플러스 유성점 하차"
-                  />
                 </Transportation>
               </div>
 
@@ -386,7 +386,7 @@ function App() {
                     className={flex({
                       align: 'center',
                       justify: 'center',
-                      gap: '4px',
+                      gap: '8px',
                       marginBottom: '2px',
                       fontSize: '18px',
                       fontWeight: 'bold',

@@ -64,8 +64,8 @@ function Gallery() {
               zIndex: '10',
             })}
           >
-            <button onClick={() => setIsOpen(false)}>
-              <Icon name="X" />
+            <button onClick={() => setIsOpen(false)} className={css({ padding: '4px' })}>
+              <Icon name="X" size={18} />
             </button>
           </header>
           <div
