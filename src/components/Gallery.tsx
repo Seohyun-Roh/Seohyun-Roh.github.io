@@ -73,7 +73,7 @@ function Gallery() {
             onClick={() => setIsOpen(false)}
           />
           <Carousel
-            className={css({ maxWidth: 'full', maxHeight: 'full', overflow: 'auto' })}
+            className={css({ maxWidth: '768px', maxHeight: 'full', overflow: 'auto' })}
             showArrows={true}
             showThumbs={false}
             showStatus={false}
