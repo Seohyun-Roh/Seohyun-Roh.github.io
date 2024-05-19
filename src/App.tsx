@@ -83,7 +83,6 @@ function App() {
                 marginTop: '54px',
                 fontSize: '17px',
                 textAlign: 'center',
-                fontFamily: 'gowun',
               })}
             >
               <div className={css({ position: 'relative' })}>
@@ -200,7 +199,6 @@ function App() {
               paddingY: '72px',
               paddingX: '16px',
               backgroundColor: 'main.100',
-              fontFamily: 'gowun',
             })}
           >
             <Animate>
@@ -448,7 +446,6 @@ function App() {
           textAlign: 'right',
           color: 'gray.400',
           backgroundColor: 'bg.100',
-          fontFamily: 'gowun',
         })}
       >
         <div

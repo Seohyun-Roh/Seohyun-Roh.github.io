@@ -10,6 +10,8 @@ export const globalCss = defineGlobalStyles({
   },
 
   'html, body': {
+    fontFamily: 'gowun',
+
     lineHeight: 1.5,
     fontWeight: 400,
     color: 'gray.800',

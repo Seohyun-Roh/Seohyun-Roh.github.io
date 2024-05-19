@@ -1,4 +1,4 @@
 export const fonts = {
-  gowun: { value: 'Gowun Batang' },
+  gowun: { value: 'GowunBatang-Regular' },
   maruburi: { value: 'MaruBuri-Regular' },
 }
