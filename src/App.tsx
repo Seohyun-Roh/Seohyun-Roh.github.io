@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { css } from '../styled-system/css'
-import { center, flex, grid } from '../styled-system/patterns'
+import { center, flex } from '../styled-system/patterns'
 
-import { Account, AccountItem, Icon, Image, Maps, Transportation, TransportationItem } from './components'
+import { Account, AccountItem, Gallery, Icon, Image, Maps, Transportation, TransportationItem } from './components'
 import Animate from './components/Animate'
 
 import Divider from './assets/image.png'
@@ -17,15 +17,6 @@ function App() {
   useEffect(() => {
     if (searchParams.get('rehearse')) setRehearse(true)
   }, [searchParams])
-
-  const images = [
-    '2FbetZAy%2FbtsGPamnnie%2Fn81nJ4RC8jeY20oKAyvGBk%2Fimg.jpg',
-    '2FbSiXGw%2FbtsGNs2AGr2%2FBWOk3Rfx1Ul5RBSw3f8nJ0%2Fimg.jpg',
-    '2Flwrw2%2FbtsGPO4sxWX%2Fne47xS9PUzK9nteSMqA8j0%2Fimg.jpg',
-    '2FDdMmM%2FbtsGMDRufX9%2FUcuoxcAD31xdciGoPdqY3k%2Fimg.jpg',
-    '2FuINzc%2FbtsGOd4QqHb%2FohewAKHk93kYb9RWyFB1l0%2Fimg.jpg',
-    '2Fde6aIm%2FbtsGNMfl4NU%2FSZKG8nQQZxlmPw63drO7B1%2Fimg.jpg',
-  ]
 
   return (
     <>
@@ -442,28 +433,10 @@ function App() {
                   fontWeight: 'bold',
                 })}
               >
-                갤러리
+                사진첩
               </h2>
 
-              <ul className={grid({ columns: { base: 2, sm: 3 }, gap: '5px' })}>
-                {images.map((href, index) => {
-                  return (
-                    <li key={href}>
-                      <Image
-                        src={`${import.meta.env.VITE_IMAGE_PREFIX}${href}`}
-                        alt={`갤러리 이미지 ${index + 1}`}
-                        style={css.raw({
-                          width: 'full',
-                          height: 'full',
-                          aspectRatio: '3/4',
-                          objectFit: 'cover',
-                          cursor: 'pointer',
-                        })}
-                      />
-                    </li>
-                  )
-                })}
-              </ul>
+              <Gallery />
             </Animate>
           </section>
         </article>
