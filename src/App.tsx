@@ -261,7 +261,7 @@ function App() {
               <h2
                 className={css({
                   marginY: '32px',
-                  fontSize: '22px',
+                  fontSize: '20px',
                   textAlign: 'center',
                   fontWeight: 'bold',
                 })}
@@ -317,7 +317,7 @@ function App() {
                   justify: 'center',
                   gap: '8px',
                   marginBottom: '6px',
-                  fontSize: '22px',
+                  fontSize: '20px',
                   textAlign: 'center',
                   fontWeight: 'bold',
                 })}
@@ -423,7 +423,7 @@ function App() {
                 className={css({
                   marginBottom: '24px',
                   paddingY: '9px',
-                  fontSize: '22px',
+                  fontSize: '20px',
                   textAlign: 'center',
                   fontWeight: 'bold',
                 })}
