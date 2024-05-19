@@ -90,21 +90,18 @@ function App() {
             >
               <div className={css({ position: 'relative' })}>
                 <p
-                  className={css(
-                    {
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '6px',
-                      marginBottom: '14px',
-                      fontSize: 'clamp(20px, 5vw, 28px)',
-                      textAlign: 'center',
-                      fontWeight: 'bold',
-                      color: 'gray.900',
-                      width: 'full',
-                    },
-                    rehearse && { fontSize: 'clamp(22px, 5vw, 28px)' }
-                  )}
+                  className={css({
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    marginBottom: '16px',
+                    fontSize: 'clamp(22px, 5vw, 28px)',
+                    textAlign: 'center',
+                    fontWeight: 'bold',
+                    color: 'gray.900',
+                    width: 'full',
+                  })}
                 >
                   {!rehearse && <Icon name="Heart" fill="#ff5245" color="#ff5245" size={14} />}
                   <span>결혼합니다</span>
@@ -118,16 +115,16 @@ function App() {
                         align: 'center',
                         justify: 'center',
                         gap: '4px',
-                        marginTop: '40px',
-                        marginBottom: '6px',
-                        fontSize: '18px',
+                        marginTop: '36px',
+                        marginBottom: '4px',
+                        fontSize: '19px',
                         fontWeight: 'bold',
                       })}
                     >
                       - 본식 -
                     </p>
                   )}
-                  <p className={css(rehearse && { fontSize: '16px' })}>
+                  <p className={css({ fontSize: '18px' })}>
                     2024년 6월 22일(토) 11시
                     <br />
                     대전 유성컨벤션 웨딩홀 2층 팰리스 홀
@@ -141,14 +138,14 @@ function App() {
                         align: 'center',
                         justify: 'center',
                         gap: '4px',
-                        marginBottom: '6px',
-                        fontSize: '18px',
+                        marginBottom: '4px',
+                        fontSize: '19px',
                         fontWeight: 'bold',
                       })}
                     >
                       - 피로연 -
                     </p>
-                    <p className={css({ fontSize: '16px' })}>
+                    <p className={css({ fontSize: '18px' })}>
                       2024년 6월 8일(토) 18시 <br />
                       통영 베이웨딩홀 2층
                     </p>
@@ -220,7 +217,7 @@ function App() {
               <p
                 className={css({
                   marginBottom: '10px',
-                  fontSize: '18px',
+
                   textAlign: 'center',
                   lineHeight: '1.55',
                   wordBreak: 'keep-all',
@@ -234,14 +231,14 @@ function App() {
               </p>
             </Animate>
             <Animate>
-              <p className={css({ fontSize: '18px', textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}>
+              <p className={css({ textAlign: 'center', lineHeight: '1.55', wordBreak: 'keep-all' })}>
                 함께 자리하여 저희가 내딛는 새 인생의 첫 걸음을
                 <br />
                 축복해 주시면 감사하겠습니다.
               </p>
             </Animate>
             <Animate>
-              <div className={css({ marginTop: '38px', fontSize: '17px' })}>
+              <div className={css({ marginTop: '38px', fontSize: '15px' })}>
                 <div className={flex({ align: 'center', gap: '4px', marginX: 'auto', width: 'fit' })}>
                   <span>김덕만 · 박지선</span>
                   <span className={css({ display: 'inline-block', fontSize: '14px', width: '44px' })}>
