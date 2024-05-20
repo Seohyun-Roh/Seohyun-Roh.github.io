@@ -1,6 +1,6 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { css } from '../../styled-system/css'
 import { center, grid } from '../../styled-system/patterns'
 import { Carousel } from 'react-responsive-carousel'
@@ -21,6 +21,10 @@ function Gallery() {
     '2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg',
     '2F46ITf%2FbtsHcpEajI7%2FT3FFBQRivLqxKhW5lc2lx0%2Fimg.jpg',
   ]
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto'
+  }, [isOpen])
 
   return (
     <>
@@ -70,11 +74,11 @@ function Gallery() {
             </button>
           </header>
           <div
-            className={css({ position: 'fixed', inset: '0', backgroundColor: 'black/40' })}
+            className={css({ position: 'fixed', inset: '0', backgroundColor: 'black/60' })}
             onClick={() => setIsOpen(false)}
           />
           <Carousel
-            className={css({ maxWidth: '768px', maxHeight: 'full', overflow: 'auto' })}
+            className={css({ maxWidth: '768px', maxHeight: 'full', overflow: 'auto', scrollbar: 'hidden' })}
             showArrows={true}
             showThumbs={false}
             showStatus={false}

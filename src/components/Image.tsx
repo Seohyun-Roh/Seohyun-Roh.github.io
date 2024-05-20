@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { css } from '../../styled-system/css'
 import { center } from '../../styled-system/patterns'
 import { SystemStyleObject } from '../../styled-system/types'
@@ -11,6 +11,10 @@ interface Props {
 
 function Image({ src, alt, style }: Props) {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto'
+  }, [isOpen])
 
   return (
     <>
