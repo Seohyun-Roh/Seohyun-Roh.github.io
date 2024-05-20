@@ -89,19 +89,18 @@ function Gallery() {
           >
             {images.map((href, index) => {
               return (
-                <li key={href} onClick={() => setActiveIndex(index)}>
-                  <img
-                    src={`${import.meta.env.VITE_IMAGE_PREFIX}${href}`}
-                    alt={`사진첩 이미지 ${index + 1}`}
-                    className={css({
-                      width: 'full',
-                      height: 'full',
-                      aspectRatio: '3/4',
-                      objectFit: 'cover',
-                      cursor: 'pointer',
-                    })}
-                  />
-                </li>
+                <img
+                  key={href}
+                  src={`${import.meta.env.VITE_IMAGE_PREFIX}${href}`}
+                  alt={`사진첩 이미지 ${index + 1}`}
+                  className={css({
+                    width: 'full',
+                    height: 'full',
+                    aspectRatio: '3/4',
+                    objectFit: 'cover',
+                    cursor: 'pointer',
+                  })}
+                />
               )
             })}
           </Carousel>
