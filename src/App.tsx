@@ -74,6 +74,7 @@ function App() {
 
             <div className={center({ marginX: '-20px', paddingX: '20px' })}>
               <Image
+                style={css.raw({ width: 'full', aspectRatio: '2/3' })}
                 src={`${import.meta.env.VITE_IMAGE_PREFIX}2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg`}
                 alt="대문 이미지"
               />

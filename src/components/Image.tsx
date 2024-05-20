@@ -19,12 +19,13 @@ function Image({ src, alt, style }: Props) {
   return (
     <>
       <div
+        className={css(style)}
         role="button"
         onClick={() => {
           setIsOpen(true)
         }}
       >
-        <img src={src} alt={alt} className={css(style)} />
+        <img src={src} alt={alt} />
       </div>
 
       {isOpen && (
