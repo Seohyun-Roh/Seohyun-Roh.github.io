@@ -12,22 +12,23 @@ function Gallery() {
   const [isOpen, setIsOpen] = useState(false)
 
   const images = [
-    '2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg',
+    '2FDdMmM%2FbtsGMDRufX9%2FUcuoxcAD31xdciGoPdqY3k%2Fimg.jpg',
     '2FbSiXGw%2FbtsGNs2AGr2%2FBWOk3Rfx1Ul5RBSw3f8nJ0%2Fimg.jpg',
     '2Flwrw2%2FbtsGPO4sxWX%2Fne47xS9PUzK9nteSMqA8j0%2Fimg.jpg',
-    '2FDdMmM%2FbtsGMDRufX9%2FUcuoxcAD31xdciGoPdqY3k%2Fimg.jpg',
     '2FuINzc%2FbtsGOd4QqHb%2FohewAKHk93kYb9RWyFB1l0%2Fimg.jpg',
-    '2Fde6aIm%2FbtsGNMfl4NU%2FSZKG8nQQZxlmPw63drO7B1%2Fimg.jpg',
     '2FJcIph%2FbtsGME3PGvM%2F5s2AItNIua5sIOk5gfpdD1%2Fimg.jpg',
-    '2FbetZAy%2FbtsGPamnnie%2Fn81nJ4RC8jeY20oKAyvGBk%2Fimg.jpg',
+    '2Fde6aIm%2FbtsGNMfl4NU%2FSZKG8nQQZxlmPw63drO7B1%2Fimg.jpg',
+    '2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg',
+    '2F46ITf%2FbtsHcpEajI7%2FT3FFBQRivLqxKhW5lc2lx0%2Fimg.jpg',
   ]
 
   return (
     <>
-      <ul className={grid({ columns: 4, gap: '3px' })}>
+      <ul className={grid({ gridTemplateColumns: 3, gap: '3px' })}>
         {images.map((href, index) => {
           return (
             <li
+              className={css({ aspectRatio: '3/4', _last: { gridColumn: 'span 2', aspectRatio: '6/4' } })}
               key={href}
               onClick={() => {
                 setIsOpen(true)
