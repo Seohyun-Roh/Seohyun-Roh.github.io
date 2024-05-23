@@ -25,7 +25,7 @@ function App() {
         className={flex({
           direction: 'column',
           minHeight: 'screen',
-          backgroundColor: 'main.100',
+          backgroundColor: 'text.1',
         })}
       >
         <article
@@ -72,7 +72,7 @@ function App() {
                 zIndex: '1',
                 width: 'full',
                 height: '120px',
-                bgGradient: 'to-t',
+                bgGradient: 'to-r',
                 gradientFrom: 'white',
                 gradientTo: 'transparent',
               })}
@@ -80,7 +80,7 @@ function App() {
           </section>
 
           <section className={css({ marginTop: '46px' })}>
-            <p className={css({ marginBottom: '10px', fontSize: '20px', fontWeight: 'bold', textAlign: 'center' })}>
+            <p className={css({ marginBottom: '10px', fontSize: '21px', fontWeight: 'bold', textAlign: 'center' })}>
               결혼합니다
             </p>
 
@@ -116,7 +116,7 @@ function App() {
               </p>
             )}
 
-            <p className={css({ textAlign: 'center' })}>
+            <p className={css({ textAlign: 'center', fontSize: '17px' })}>
               2024년 6월 22일(토) 11시
               <br />
               대전 유성컨벤션 웨딩홀 2층 팰리스 홀
@@ -165,13 +165,21 @@ function App() {
 
           <section className={css({ marginTop: '74px' })}>
             <Animate>
-              <p className={css({ marginBottom: '20px', fontFamily: 'seaweed', textAlign: 'center', color: 'text.3' })}>
+              <p
+                className={css({
+                  marginBottom: '20px',
+                  fontFamily: 'seaweed',
+                  textAlign: 'center',
+                  color: 'text.3',
+                  fontSize: '17px',
+                })}
+              >
                 Invite you
               </p>
 
               <div
                 className={css(
-                  { display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px', textAlign: 'center' },
+                  { display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '15px', textAlign: 'center' },
                   rehearse && { fontSize: '16px' }
                 )}
               >
@@ -190,7 +198,7 @@ function App() {
                 </p>
               </div>
 
-              <div className={css({ marginTop: '32px', fontSize: '13px' }, rehearse && { fontSize: '15px' })}>
+              <div className={css({ marginTop: '32px', fontSize: '14px' }, rehearse && { fontSize: '15px' })}>
                 <div className={css({ textAlign: 'center' })}>
                   <span className={css({ fontWeight: 'bold' })}>김덕만 · 박지선</span>
                   <span className={css({ display: 'inline-block', textAlign: 'left', width: '50px' })}>의 아들</span>
@@ -208,7 +216,15 @@ function App() {
 
           <section className={css({ marginTop: '94px' })}>
             <Animate>
-              <p className={css({ marginBottom: '24px', fontFamily: 'seaweed', textAlign: 'center', color: 'text.3' })}>
+              <p
+                className={css({
+                  marginBottom: '24px',
+                  fontFamily: 'seaweed',
+                  textAlign: 'center',
+                  color: 'text.3',
+                  fontSize: '17px',
+                })}
+              >
                 Gallery
               </p>
 
@@ -218,7 +234,15 @@ function App() {
 
           <section className={css({ marginTop: '94px', paddingX: '20px' })}>
             <Animate>
-              <p className={css({ marginBottom: '8px', fontFamily: 'seaweed', textAlign: 'center', color: 'text.3' })}>
+              <p
+                className={css({
+                  marginBottom: '8px',
+                  fontFamily: 'seaweed',
+                  textAlign: 'center',
+                  color: 'text.3',
+                  fontSize: '17px',
+                })}
+              >
                 Account
               </p>
 
@@ -251,7 +275,15 @@ function App() {
 
           <section className={css({ marginTop: '100px' })}>
             <Animate>
-              <p className={css({ marginBottom: '4px', fontFamily: 'seaweed', textAlign: 'center', color: 'text.3' })}>
+              <p
+                className={css({
+                  marginBottom: '4px',
+                  fontFamily: 'seaweed',
+                  textAlign: 'center',
+                  color: 'text.3',
+                  fontSize: '17px',
+                })}
+              >
                 Location
               </p>
 
