@@ -72,7 +72,7 @@ function App() {
                 zIndex: '1',
                 width: 'full',
                 height: '120px',
-                bgGradient: 'to-r',
+                bgGradient: 'to-t',
                 gradientFrom: 'white',
                 gradientTo: 'transparent',
               })}
