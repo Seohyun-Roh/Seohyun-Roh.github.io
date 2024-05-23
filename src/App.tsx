@@ -47,11 +47,11 @@ function App() {
             />
 
             <div className={css({ position: 'absolute', top: 'clamp(54px, 15vw, 60px)', width: 'full' })}>
-              <p className={css({ marginBottom: '8px', fontSize: 'clamp(10px, 2.5vw, 16px)', textAlign: 'center' })}>
+              <p className={css({ marginBottom: '8px', fontSize: 'clamp(11px, 2.5vw, 16px)', textAlign: 'center' })}>
                 SAVE THE DATE
               </p>
 
-              <div className={center({ gap: '8px', fontSize: 'clamp(16px, 4vw, 22px)' })}>
+              <div className={center({ gap: '8px', fontSize: 'clamp(17px, 4vw, 22px)' })}>
                 <span>노지수</span>
                 <hr
                   className={css({
