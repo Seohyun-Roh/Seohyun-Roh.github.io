@@ -4,6 +4,7 @@ import { flex } from '../../styled-system/patterns'
 import { css } from '../../styled-system/css'
 
 import Icon from './Icon'
+import Button from './Button'
 
 interface Props {
   name: string
@@ -17,32 +18,20 @@ function AccountItem({ name, account }: Props) {
     <div
       className={flex({
         align: 'center',
-        gap: '9px',
-        borderTopWidth: '1px',
-        borderTopColor: 'gray.200',
-        paddingLeft: '14px',
-        paddingY: '14px',
-        paddingRight: '13px',
-        '& + &': { borderTopColor: 'gray.100' },
+        gap: '16px',
+        borderTopColor: '#F7F7F7',
+        padding: '12px',
+        fontSize: '15px',
+        '& + &': { borderTopWidth: '1px' },
       })}
     >
-      <div className={css({ flex: 'none', width: '45px' })}>{name}</div>
+      <p className={css({ flex: 'none', fontWeight: 'bold', width: '42px' })}>{name}</p>
 
       <div className={flex({ align: 'center', justify: 'space-between', width: 'full' })}>
         <p>{account}</p>
 
-        <button
-          type="button"
-          className={flex({
-            align: 'center',
-            gap: '4px',
-            flex: 'none',
-            paddingY: '3px',
-            paddingX: '7px',
-            fontSize: '13px',
-            color: 'gray.600',
-            backgroundColor: 'gray.100',
-          })}
+        <Button
+          style={flex.raw({ align: 'center', gap: '4px' })}
           onClick={async () => {
             const accountNumber = account.split(' ')[1].replace(/-/g, '')
 
@@ -60,7 +49,7 @@ function AccountItem({ name, account }: Props) {
         >
           <Icon name={buttonIcon} size={12} />
           복사
-        </button>
+        </Button>
       </div>
     </div>
   )

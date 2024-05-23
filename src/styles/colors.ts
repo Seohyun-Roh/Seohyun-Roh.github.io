@@ -11,12 +11,10 @@ export const colors = {
     800: { value: '#262626' },
     900: { value: '#171717' },
   },
-  bg: {
-    100: { value: '#F6F5F2' },
-    900: { value: '#F0EBE3' },
-  },
-  main: {
-    100: { value: '#FFF5F5' },
-    900: { value: '#F3D0D7' },
+  text: {
+    1: { value: '#282625' },
+    2: { value: '#898481' },
+    3: { value: '#AC8B75' },
+    4: { value: '#9F7B63' },
   },
 }

@@ -16,9 +16,9 @@ function Maps({ lat, lng }: Props) {
   return (
     <>
       {loading ? (
-        <div className={css({ width: 'full', height: '300px' })}>지도 불러오는 중..</div>
+        <div className={css({ width: 'full', height: '203px' })}>지도 불러오는 중..</div>
       ) : (
-        <Map center={{ lat, lng }} style={{ width: '100%', height: '300px' }} level={2}>
+        <Map center={{ lat, lng }} style={{ width: 'full', height: '203px' }} level={2}>
           <MapMarker
             position={{ lat, lng }}
             image={{

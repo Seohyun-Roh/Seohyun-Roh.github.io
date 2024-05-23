@@ -1,51 +1,71 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { css } from '../../styled-system/css'
-import { center, grid } from '../../styled-system/patterns'
+import { flex } from '../../styled-system/patterns'
 import { Carousel } from 'react-responsive-carousel'
-
-import Icon from './Icon'
 
 function Gallery() {
   const [activeIndex, setActiveIndex] = useState(0)
-  const [isOpen, setIsOpen] = useState(false)
 
   const images = [
-    '2FDdMmM%2FbtsGMDRufX9%2FUcuoxcAD31xdciGoPdqY3k%2Fimg.jpg',
     '2FbSiXGw%2FbtsGNs2AGr2%2FBWOk3Rfx1Ul5RBSw3f8nJ0%2Fimg.jpg',
-    '2Flwrw2%2FbtsGPO4sxWX%2Fne47xS9PUzK9nteSMqA8j0%2Fimg.jpg',
     '2FuINzc%2FbtsGOd4QqHb%2FohewAKHk93kYb9RWyFB1l0%2Fimg.jpg',
+    '2Flwrw2%2FbtsGPO4sxWX%2Fne47xS9PUzK9nteSMqA8j0%2Fimg.jpg',
+    '2FDdMmM%2FbtsGMDRufX9%2FUcuoxcAD31xdciGoPdqY3k%2Fimg.jpg',
     '2FJcIph%2FbtsGME3PGvM%2F5s2AItNIua5sIOk5gfpdD1%2Fimg.jpg',
+    '2F46ITf%2FbtsHcpEajI7%2FT3FFBQRivLqxKhW5lc2lx0%2Fimg.jpg',
     '2Fde6aIm%2FbtsGNMfl4NU%2FSZKG8nQQZxlmPw63drO7B1%2Fimg.jpg',
     '2FbeO1LT%2FbtsGMFBABiX%2Fsc7VUeQMWV0ZPtGNwkNgK1%2Fimg.jpg',
-    '2F46ITf%2FbtsHcpEajI7%2FT3FFBQRivLqxKhW5lc2lx0%2Fimg.jpg',
   ]
-
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'auto'
-  }, [isOpen])
 
   return (
     <>
-      <ul className={grid({ gridTemplateColumns: 3, gap: '3px' })}>
+      <Carousel
+        className={css({ maxWidth: '768px', maxHeight: 'full', overflow: 'auto', scrollbar: 'hidden' })}
+        showArrows={true}
+        showThumbs={false}
+        showStatus={false}
+        showIndicators={false}
+        infiniteLoop={true}
+        emulateTouch={true}
+        selectedItem={activeIndex}
+        onChange={(index) => setActiveIndex(index)}
+      >
         {images.map((href, index) => {
           return (
-            <li
-              className={css({ aspectRatio: '3/4', _last: { gridColumn: 'span 2', aspectRatio: '6/4' } })}
+            <img
               key={href}
-              onClick={() => {
-                setIsOpen(true)
-                setActiveIndex(index)
-              }}
+              src={`${import.meta.env.VITE_IMAGE_PREFIX}${href}`}
+              alt={`사진첩 이미지 ${index + 1}`}
+              className={css({
+                width: 'full',
+                height: 'full',
+                aspectRatio: '3/4',
+                objectFit: 'cover',
+                cursor: 'pointer',
+              })}
+            />
+          )
+        })}
+      </Carousel>
+      <ul className={flex({ align: 'center', width: 'full' })}>
+        {images.map((href, index) => {
+          const key = href + index
+
+          return (
+            <li
+              key={key}
+              onClick={() => setActiveIndex(index)}
+              className={css(activeIndex !== index && { opacity: '0.2' })}
             >
               <img
                 src={`${import.meta.env.VITE_IMAGE_PREFIX}${href}`}
-                alt={`사진첩 이미지 ${index + 1}`}
+                alt={`사진첩 썸네일 이미지 ${index + 1}`}
                 className={css({
                   width: 'full',
                   height: 'full',
-                  aspectRatio: '3/4',
+                  aspectRatio: '1/1',
                   objectFit: 'cover',
                   cursor: 'pointer',
                 })}
@@ -54,58 +74,6 @@ function Gallery() {
           )
         })}
       </ul>
-      {isOpen && (
-        <div className={center({ position: 'fixed', inset: '0', zIndex: '10', paddingY: '10px' })}>
-          <header
-            className={css({
-              position: 'fixed',
-              top: '0',
-              paddingY: '4px',
-              paddingX: '4px',
-              textAlign: 'right',
-              color: 'gray.100',
-              backgroundColor: 'black/20',
-              width: 'full',
-              zIndex: '10',
-            })}
-          >
-            <button onClick={() => setIsOpen(false)} className={css({ padding: '4px' })}>
-              <Icon name="X" size={18} />
-            </button>
-          </header>
-          <div
-            className={css({ position: 'fixed', inset: '0', backgroundColor: 'black/60' })}
-            onClick={() => setIsOpen(false)}
-          />
-          <Carousel
-            className={css({ maxWidth: '768px', maxHeight: 'full', overflow: 'auto', scrollbar: 'hidden' })}
-            showArrows={true}
-            showThumbs={false}
-            showStatus={false}
-            showIndicators={false}
-            infiniteLoop={true}
-            emulateTouch={true}
-            selectedItem={activeIndex}
-          >
-            {images.map((href, index) => {
-              return (
-                <img
-                  key={href}
-                  src={`${import.meta.env.VITE_IMAGE_PREFIX}${href}`}
-                  alt={`사진첩 이미지 ${index + 1}`}
-                  className={css({
-                    width: 'full',
-                    height: 'full',
-                    aspectRatio: '3/4',
-                    objectFit: 'cover',
-                    cursor: 'pointer',
-                  })}
-                />
-              )
-            })}
-          </Carousel>
-        </div>
-      )}
     </>
   )
 }

@@ -13,30 +13,23 @@ function Account({ who, children }: Props) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div
-      className={css({
-        marginTop: '32px',
-        marginX: 'auto',
-        width: 'full',
-        maxWidth: '340px',
-        backgroundColor: 'white',
-      })}
-    >
+    <div className={css({ marginX: 'auto', borderWidth: '1px', borderColor: '#F7F7F7', width: 'full' })}>
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         className={flex({
           align: 'center',
           justify: 'space-between',
-          paddingLeft: '14px',
-          paddingY: '12px',
-          paddingRight: '13px',
-          fontSize: '18px',
+          paddingLeft: '12px',
+          paddingY: '10px',
+          paddingRight: '10px',
+          fontWeight: 'bold',
+          backgroundColor: '#F7F7F7',
           width: 'full',
         })}
       >
         {who}측 계좌번호
-        <Icon name={isOpen ? 'ChevronUp' : 'ChevronDown'} size={16} strokeWidth={1.5} />
+        <Icon name={isOpen ? 'ChevronUp' : 'ChevronDown'} size={20} strokeWidth={1.5} color="#8C8C8C" />
       </button>
 
       {isOpen && <>{children}</>}
