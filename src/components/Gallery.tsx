@@ -44,6 +44,7 @@ function Gallery() {
                 aspectRatio: '3/4',
                 objectFit: 'cover',
                 cursor: 'pointer',
+                userSelect: 'none',
               })}
             />
           )
